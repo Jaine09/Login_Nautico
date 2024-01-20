@@ -1,0 +1,76 @@
+/* Fonte e cor utilizada na aba de: "Seja Sócio" no site oficial*/
+body{
+    margin: 0;
+    font-family: open_sansregular,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: #de1219;
+}
+
+/* Estilização da classe "login" */
+.login{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ED1C24;
+}
+
+/* Estilização do container */
+.container-login{
+    min-height: 500px;
+    width: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 9px;
+    align-items: center;
+}
+
+/* Estilização do formuário */
+.login-formulario{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilização do input */
+
+.login-email, .login-senha {
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    padding-left: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 9px;
+}
+
+/* Estilização do botão */
+.login-entrar{
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(120deg, #C50201, #ED1C24);
+    color: white;
+    border-radius: 9px;
+    background-size: 200%;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease-in;
+    margin-top: 10px;
+}
+
+/* Estilização dos links de "esqueci a senha" e "Cadastre-se" */
+.recuperar-senha, .Cadastre-se{
+    text-decoration: none;
+    color: #C50201;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
