@@ -1,3 +1,14 @@
+/* pseudo-class para evitar a repetição de codigo  */
+:root{
+    --flex-direction: column;
+    --display: flex;
+    --align-items: center;
+    --justify-content: center;
+    --margin-top: 10px;
+    --margin-bottom: 10px;
+    --width: 100%;
+}
+
 /* Fonte e cor utilizada na aba de: "Seja Sócio" no site oficial*/
 body{
     margin: 0;
@@ -11,9 +22,9 @@ body{
 /* Estilização da classe "login" */
 .login{
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: var(--display);
+    align-items: var(--align-items);
+    justify-content: var(--justify-content);
     background-color: #ED1C24;
 }
 
@@ -22,49 +33,49 @@ body{
     min-height: 500px;
     width: 500px;
     background-color: white;
-    display: flex;
-    flex-direction: column;
+    display: var(--display);
+    flex-direction: var(--flex-direction);
     padding: 35px;
     box-sizing: border-box;
     border-radius: 9px;
-    align-items: center;
+    align-items: var(--align-items);
 }
 
 /* Estilização do formuário */
 .login-formulario{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    display: var(--display);
+    flex-direction: var(--flex-direction);
+    width: var(--width);
+    align-items: var(--align-items);
+    justify-content: var(--justify-content);
 }
 
 /* Estilização do input */
 
 .login-email, .login-senha {
-    width: 100%;
+    width: var(--width);
     height: 48px;
     box-sizing: border-box;
     padding-left: 8px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: var(--margin-bottom);
+    margin-top: var(--margin-top);
     border-radius: 9px;
 }
 
 /* Estilização do botão */
 .login-entrar{
-    width: 100%;
+    width: var(--width);
     height: 50px;
     background: linear-gradient(120deg, #C50201, #ED1C24);
     color: white;
     border-radius: 9px;
     background-size: 200%;
-    margin-bottom: 10px;
+    margin-bottom: var(--margin-bottom);
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: .3s ease-in;
-    margin-top: 10px;
+    margin-top: var(--margin-top);
 }
 
 /* Estilização dos links de "esqueci a senha" e "Cadastre-se" */
