@@ -1,0 +1,21 @@
+
+body{
+    background: linear-gradient(120deg, #681e21, #641b1d);
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    border: 1px solid white;
+    background-color: black;
+}
+
+a, .nav-link{
+    color: white;
+}
+
+.btn-outline-success{
+    background-color: black;
+    color: white;
+    border: 1px solid whitesmoke;
+}

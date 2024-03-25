@@ -16,9 +16,9 @@
             <h2> Recuperação de senha</h2>
             <h4>Para recuperar sua senha, insira o e-mail cadastrado. </h4>
             <!-- Formulário de preenchimento -->
-            <form class="recuperar-a-senha">
-                <input type="text" name="e-mail" placeholder="E-mail">
-                <button class="enviar-esqueci-a-senha">Enviar</button> 
+            <form action="recuperacaoSenha.php" method="POST "class="recuperar-a-senha">
+                <input type="text" name="email" placeholder="E-mail">
+                <button type="submit" name="submit" class="enviar-esqueci-a-senha">Enviar</button> 
             </form>
         </div>
     </main>

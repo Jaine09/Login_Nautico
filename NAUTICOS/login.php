@@ -17,12 +17,12 @@
 
             <img src="./img/timbu.png" width="300px" height="300px" alt="Mascote do Náutico de Capibaribe">
 
-            <form class="login-formulario">
-                <input class="login-email" type="email" placeholder="e-mail">
-                <input class="login-senha" type="password" placeholder="senha"> 
-                <button class="login-entrar">Entrar</button>   
-                <a class="recuperar-senha" href="./esqueci_a_senha.html">Esqueci a senha</a> 
-                <a class="Cadastre-se" href="./cadastro.html">Cadastre-se</a> 
+            <form action="logar.php" method="POST" class="login-formulario">
+                <input class="login-email" type="email" name="email" placeholder="e-mail">
+                <input class="login-senha" type="password" name="senha" placeholder="senha"> 
+                <button type="submit" name="submit" class="login-entrar">Entrar</button>   
+                <a class="recuperar-senha" href="./esqueci_a_senha.php">Esqueci a senha</a> 
+                <a class="Cadastre-se" href="./cadastro.php">Cadastre-se</a> 
 
             </form>
             
