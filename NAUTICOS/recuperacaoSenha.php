@@ -9,7 +9,7 @@ require '../PHPMailer-master/src/PHPMailer.php';
 require '../PHPMailer-master/src/SMTP.php';
 
 
-$mail = new PHPMailer(true);
+$mail = new PHPMailer();
 
 // TESTANDO SE ESTAR FUNCIONANDO
 /*try{
@@ -19,7 +19,7 @@ $mail = new PHPMailer(true);
 }*/
 
 try {
-    $mail->SMTPDebug = 0;
+    // $mail->SMTPDebug = 0;
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
@@ -28,15 +28,15 @@ try {
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
      
-    $mail->CharSet = 'UTF-8';
+    // $mail->CharSet = 'UTF-8';
     $mail->setFrom('afonsecadesantana@gmail.com', 'Alan');
-    $mail->addAddress('jainejesus0911@gmail.com', 'Jaine');
+    $mail->addAddress('dev.jainejesus@gmail.com', 'Jaine');
     $mail->isHTML(true);
     $mail->Subject = 'Recuperação de Senha';
     $mail->Body = 'Sua senha de recuperação é 1234';
 
     $mail->send();
-    echo 'Email enviado com sucesso!';
+    print_r ('Email enviado com sucesso!');
     
 } catch (Exception $e) {
     echo 'Erro ao enviar o email: ' . $mail->ErrorInfo;
