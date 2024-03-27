@@ -1,24 +1,47 @@
 <?php
+// session_star();
 
-  // emails para quem será enviado o formulário
-  $emailenviar = "nautico@gmail.com";
-  $destino = $_POST['email'];
-  $assunto = "Recuperação de senha";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-  // É necessário indicar que o formato do e-mail é html
-  $headers  = 'MIME-Version: 1.0' . "\r\n";
-      $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-      $headers .= 'From: <$email>';
-  //$headers .= "Bcc: $EmailPadrao\r\n";
+require '../PHPMailer-master/src/Exception.php';
+require '../PHPMailer-master/src/PHPMailer.php';
+require '../PHPMailer-master/src/SMTP.php';
 
-  $enviaremail = mail($destino, $assunto, $headers);
-  if(isset($_POST['submit']) && $enviaremail){
-  $mgm = "E-MAIL ENVIADO COM SUCESSO! <br> O link será enviado para o e-mail fornecido no formulário";
-  echo " <meta http-equiv='refresh' content='10;URL=contato.php'>";
-  } else {
-  $mgm = "ERRO AO ENVIAR E-MAIL!";
-  echo "";
-  }
+
+$mail = new PHPMailer(true);
+
+// TESTANDO SE ESTAR FUNCIONANDO
+/*try{
+  echo 'funcionando';
+} catch (Exception $e) {
+  echo 'foi não';
+}*/
+
+try {
+    $mail->SMTPDebug = 0;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'afonsecadesantana@gmail.com';
+    $mail->Password = '464859314Al';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+     
+    $mail->CharSet = 'UTF-8';
+    $mail->setFrom('afonsecadesantana@gmail.com', 'Alan');
+    $mail->addAddress('jainejesus0911@gmail.com', 'Jaine');
+    $mail->isHTML(true);
+    $mail->Subject = 'Recuperação de Senha';
+    $mail->Body = 'Sua senha de recuperação é 1234';
+
+    $mail->send();
+    echo 'Email enviado com sucesso!';
+    
+} catch (Exception $e) {
+    echo 'Erro ao enviar o email: ' . $mail->ErrorInfo;
+} 
+
 ?>
 
 
